@@ -3,6 +3,9 @@ import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink } from 'lucide-react'
+import tulioImg from './assets/tulio-rodrigues.webp'
+import marcosImg from './assets/marcos-santos.webp'
+import luizImg from './assets/luiz-oliveira.webp'
 import './App.css'
 
 function App() {
@@ -597,8 +600,8 @@ function App() {
             {/* Túlio */}
             <Card className="bg-slate-900/50 border-slate-800 hover:border-yellow-500 transition-all duration-300">
               <CardHeader>
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-slate-950">
-                  TR
+                <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-yellow-500">
+                  <img src={tulioImg} alt="Túlio Rodrigues" className="w-full h-full object-cover" />
                 </div>
                 <CardTitle className="text-center text-yellow-400">Túlio Rodrigues</CardTitle>
                 <CardDescription className="text-center text-slate-400">CEO</CardDescription>
@@ -613,8 +616,8 @@ function App() {
             {/* Marcos */}
             <Card className="bg-slate-900/50 border-slate-800 hover:border-yellow-500 transition-all duration-300">
               <CardHeader>
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-slate-950">
-                  MS
+                <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-yellow-500">
+                  <img src={marcosImg} alt="Marcos Santos" className="w-full h-full object-cover" />
                 </div>
                 <CardTitle className="text-center text-yellow-400">Marcos Santos</CardTitle>
                 <CardDescription className="text-center text-slate-400">CCO</CardDescription>
@@ -629,8 +632,8 @@ function App() {
             {/* Luiz */}
             <Card className="bg-slate-900/50 border-slate-800 hover:border-yellow-500 transition-all duration-300">
               <CardHeader>
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-slate-950">
-                  LO
+                <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-yellow-500">
+                  <img src={luizImg} alt="Luiz Oliveira" className="w-full h-full object-cover" />
                 </div>
                 <CardTitle className="text-center text-yellow-400">Luiz Oliveira</CardTitle>
                 <CardDescription className="text-center text-slate-400">Sócio / Vendas / Faturamento</CardDescription>
