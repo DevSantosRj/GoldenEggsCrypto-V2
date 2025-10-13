@@ -149,13 +149,13 @@ function App() {
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-6 mt-12">
             <Badge variant="outline" className="border-green-500 text-green-400 px-4 py-2 text-sm">
-              <CheckCircle2 className="mr-2" size={16} /> Auditado
+              <CheckCircle2 className="mr-2" size={16} /> {t('audited')}
             </Badge>
             <Badge variant="outline" className="border-blue-500 text-blue-400 px-4 py-2 text-sm">
-              <Shield className="mr-2" size={16} /> Lastro Real
+              <Shield className="mr-2" size={16} /> {t('realBacking')}
             </Badge>
             <Badge variant="outline" className="border-purple-500 text-purple-400 px-4 py-2 text-sm">
-              <TrendingUp className="mr-2" size={16} /> Transparente
+              <TrendingUp className="mr-2" size={16} /> {t('transparent')}
             </Badge>
           </div>
         </div>
@@ -308,11 +308,11 @@ function App() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-              🏦 Clube Seguro Bank Golden Eggs
+              {t('seguroBankTitle')}
             </h2>
             <p className="text-xl text-slate-400">{t('seguroBankSubtitle')}</p>
             <p className="text-lg text-slate-300 mt-4 max-w-3xl mx-auto">
-              O Seguro Bank Golden Eggs é um programa especial de proteção e recompensas criado para apoiar e incentivar os primeiros investidores do projeto.
+              {t('seguroBankDescription')}
             </p>
           </div>
 
@@ -727,10 +727,10 @@ function App() {
             </span>
           </div>
           <p className="text-slate-400 mb-4">
-            Conectando a economia digital ao setor agropecuário através da tecnologia blockchain.
+            {t('footerDescription')}
           </p>
           <p className="text-slate-500 text-sm">
-            © 2025 Golden Eggs. Todos os direitos reservados.
+            {t('footerText')}
           </p>
         </div>
       </footer>
