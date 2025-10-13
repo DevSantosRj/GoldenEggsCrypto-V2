@@ -1,0 +1,376 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  pt: {
+    translation: {
+      // Header
+      "about": "Sobre",
+      "tokenomics": "Tokenomics",
+      "benefits": "Benefícios",
+      "roadmap": "Roadmap",
+      "team": "Equipe",
+      "contact": "Contato",
+      "visitWebsite": "VISITE O SITE EMPRESARIAL",
+      
+      // Hero
+      "heroTitle": "GOLDEN EGGS RWA",
+      "heroSubtitle": "Investindo no Futuro da Avicultura",
+      "heroSubtitle2": "com a Segurança da Blockchain.",
+      "heroDescription": "Conectando o investidor digital ao mercado mais resiliente do mundo: a produção de ovos.",
+      "totalSupply": "Total Supply",
+      "initialPrice": "Preço Inicial",
+      "realWorldAsset": "Real World Asset",
+      "participateSale": "Participar da Venda",
+      "knowProject": "Conheça o Projeto",
+      "audited": "Auditado",
+      "realBacking": "Lastro Real",
+      "transparent": "Transparente",
+      
+      // About
+      "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
+      "aboutDescription": "Investindo no Futuro da Avicultura com a Segurança da Blockchain. Golden Eggs ($GEG) é um projeto inovador de Ativo do Mundo Real (RWA - Real World Asset) que conecta o investidor digital diretamente a um dos mercados mais resilientes do mundo: a produção de ovos. Ao tokenizar as operações de uma granja avícola, oferecemos transparência, liquidez e uma oportunidade de investimento tangível e sustentável.",
+      "institutionalSecurity": "Segurança Institucional",
+      "institutionalSecurityDesc": "Ativos lastreados em operações reais do setor agropecuário, garantindo solidez e estabilidade para seu investimento.",
+      "corporateGovernance": "Governança Corporativa",
+      "corporateGovernanceDesc": "Práticas rigorosas de gestão e transparência, alinhadas aos mais altos padrões do mercado.",
+      "consistentResults": "Resultados Consistentes",
+      "consistentResultsDesc": "Estratégia de crescimento sustentável, focada em resultados de longo prazo.",
+      
+      // Tokenomics
+      "tokenomicsTitle": "Tokenomics",
+      "tokenomicsSubtitle": "Distribuição transparente e sustentável do token Golden Eggs ($GEG)",
+      "tokenDistribution": "Distribuição do Token",
+      "farmExpansion": "Expansão da Granja (Tesouraria do Projeto)",
+      "liquidity": "Liquidez",
+      "marketing": "Marketing",
+      "maintenance": "Manutenção e Operações",
+      "transactionFees": "Taxas de Transação",
+      "buyFee": "Taxa de Compra (5%)",
+      "burn": "Queima",
+      "sellFee": "Taxa de Venda (15%)",
+      "usdtReflections": "Reflexões em USDT",
+      "totalSupplyLabel": "Suprimento Total",
+      
+      // Seguro Bank
+      "seguroBankTitle": "🏦 Clube Seguro Bank Golden Eggs",
+      "seguroBankSubtitle": "Exclusivo para os 100 primeiros investidores do token $GEG",
+      "seguroBankDescription": "O Seguro Bank Golden Eggs é um programa especial de proteção e recompensas criado para apoiar e incentivar os primeiros investidores do projeto. Ele está dividido em três categorias: Ouro, Prata e Bronze, com diferentes níveis de benefícios baseados no valor investido.",
+      "categoryGold": "Categoria OURO",
+      "categorySilver": "Categoria PRATA",
+      "categoryBronze": "Categoria BRONZE",
+      "minInvestment": "Valor Mínimo de Investimento",
+      "insuranceCoverage": "Cobertura do Seguro:",
+      "monthlyReward": "Recompensa Mensal:",
+      "maxReward": "Máxima Recompensa:",
+      "mostPopular": "MAIS POPULAR",
+      "benefitsTitle": "🎁 Benefícios do Seguro Bank",
+      "rewardValidity": "Validade das Recompensas",
+      "rewardValidityDesc": "Garantidas por até 24 meses enquanto o investidor mantiver o valor investido.",
+      "directPayments": "Pagamentos Diretos",
+      "directPaymentsDesc": "As recompensas mensais serão pagas em USDT diretamente na carteira do investidor.",
+      "insuranceActivation": "Acionamento do Seguro",
+      "insuranceActivationDesc": "Se, após 6 meses, o token $GEG apresentar desvalorização significativa, o seguro poderá ser acionado.",
+      "exclusiveClub": "Garante Sua Vaga no Clube Exclusivo!",
+      "exclusiveClubDesc": "Apenas os 100 primeiros investidores terão acesso a estes benefícios únicos.",
+      "investNow": "Investir Agora",
+      "disclaimer": "⚠️ Importante:",
+      "disclaimerText": "A aquisição do Seguro Bank Golden Eggs será finalizada após o término da pré-venda.",
+      
+      // Roadmap
+      "roadmapTitle": "Roteiro de Desenvolvimento (Roadmap)",
+      "roadmapSubtitle": "Nossa jornada de desenvolvimento e expansão",
+      "phase1": "Fase 1: Fundação e Lançamento",
+      "phase1Item1": "Construção de 4 galpões iniciais, com capacidade para 1.000 aves poedeiras cada",
+      "phase1Item2": "Aquisição inicial de 4.000 aves poedeiras de alta qualidade",
+      "phase1Item3": "Desenvolvimento e publicação do Whitepaper oficial e do website do projeto",
+      "phase1Item4": "Auditoria e implementação do contrato inteligente (Smart Contract) do token $GEG",
+      "phase2": "Fase 2: Expansão e Verticalização",
+      "phase2Item1": "Construção de 10 galpões adicionais para escalar a produção",
+      "phase2Item2": "Aquisição de 10.000 novas aves poedeiras para atender à crescente demanda",
+      "phase2Item3": "Desenvolvimento de parcerias estratégicas no setor do agronegócio",
+      "phase2Item4": "Implementação de uma fábrica própria de rações para otimizar custos",
+      "phase3": "Fase 3: Autossuficiência e Crescimento de Mercado",
+      "phase3Item1": "Construção de mais 10 galpões, consolidando a capacidade produtiva",
+      "phase3Item2": "Aquisição de 10.000 aves poedeiras adicionais",
+      "phase3Item3": "Estabelecimento de uma matriz própria para a produção de pintainhas",
+      "phase4": "Fase 4: Consolidação e Inovação Tecnológica",
+      "phase4Item1": "Otimização da logística para venda direta ao consumidor final",
+      "phase4Item2": "Lançamento de uma plataforma de ensino para novos avicultores",
+      "phase4Item3": "Desenvolvimento de um aplicativo próprio para delivery de ovos",
+      "phase4Item4": "Expansão da presença do token $GEG em novas exchanges",
+      "roadmapFooter": "Todos os marcos foram cuidadosamente planejados para maximizar o valor para nossos investidores e garantir o crescimento sustentável do projeto.",
+      
+      // Team
+      "teamTitle": "Nossa Equipe",
+      "teamSubtitle": "Conheça os profissionais que fazem a Golden Eggs acontecer",
+      "tulioRole": "CEO",
+      "tulioDesc": "Owner da Comunidade Ze's Group, Túlio lidera a Golden Eggs com sua vasta experiência em comunidades e mercados digitais, trazendo uma visão inovadora para o setor agropecuário tokenizado.",
+      "marcosRole": "CCO",
+      "marcosDesc": "Sócio, Analista administrativo e marketing digital",
+      "luizRole": "Sócio / Vendas / Faturamento",
+      "luizDesc": "Assistente financeiro prestando suporte às operações financeiras da empresa. Envolve analisar o controle das contas a pagar e a receber, emissão de notas fiscais e acompanhamento de transações financeiras.",
+      
+      // Contact
+      "contactTitle": "Junte-se à Nossa Comunidade",
+      "contactSubtitle": "Fique por dentro de todas as novidades e participe ativamente do futuro da Golden Eggs",
+      "official": "Oficial",
+      
+      // Footer
+      "footerText": "© 2025 Golden Eggs RWA. Todos os direitos reservados.",
+      "footerDescription": "Investindo no futuro da avicultura com a segurança da blockchain."
+    }
+  },
+  en: {
+    translation: {
+      // Header
+      "about": "About",
+      "tokenomics": "Tokenomics",
+      "benefits": "Benefits",
+      "roadmap": "Roadmap",
+      "team": "Team",
+      "contact": "Contact",
+      "visitWebsite": "VISIT CORPORATE WEBSITE",
+      
+      // Hero
+      "heroTitle": "GOLDEN EGGS RWA",
+      "heroSubtitle": "Investing in the Future of Poultry Farming",
+      "heroSubtitle2": "with Blockchain Security.",
+      "heroDescription": "Connecting digital investors to the world's most resilient market: egg production.",
+      "totalSupply": "Total Supply",
+      "initialPrice": "Initial Price",
+      "realWorldAsset": "Real World Asset",
+      "participateSale": "Join the Sale",
+      "knowProject": "Learn About the Project",
+      "audited": "Audited",
+      "realBacking": "Real Backing",
+      "transparent": "Transparent",
+      
+      // About
+      "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
+      "aboutDescription": "Investing in the Future of Poultry Farming with Blockchain Security. Golden Eggs ($GEG) is an innovative Real World Asset (RWA) project that directly connects digital investors to one of the world's most resilient markets: egg production. By tokenizing poultry farm operations, we offer transparency, liquidity, and a tangible, sustainable investment opportunity.",
+      "institutionalSecurity": "Institutional Security",
+      "institutionalSecurityDesc": "Assets backed by real agricultural sector operations, ensuring solidity and stability for your investment.",
+      "corporateGovernance": "Corporate Governance",
+      "corporateGovernanceDesc": "Rigorous management and transparency practices, aligned with the highest market standards.",
+      "consistentResults": "Consistent Results",
+      "consistentResultsDesc": "Sustainable growth strategy, focused on long-term results.",
+      
+      // Tokenomics
+      "tokenomicsTitle": "Tokenomics",
+      "tokenomicsSubtitle": "Transparent and sustainable distribution of the Golden Eggs ($GEG) token",
+      "tokenDistribution": "Token Distribution",
+      "farmExpansion": "Farm Expansion (Project Treasury)",
+      "liquidity": "Liquidity",
+      "marketing": "Marketing",
+      "maintenance": "Maintenance and Operations",
+      "transactionFees": "Transaction Fees",
+      "buyFee": "Buy Fee (5%)",
+      "burn": "Burn",
+      "sellFee": "Sell Fee (15%)",
+      "usdtReflections": "USDT Reflections",
+      "totalSupplyLabel": "Total Supply",
+      
+      // Seguro Bank
+      "seguroBankTitle": "🏦 Golden Eggs Bank Insurance Club",
+      "seguroBankSubtitle": "Exclusive for the first 100 $GEG token investors",
+      "seguroBankDescription": "The Golden Eggs Bank Insurance is a special protection and rewards program created to support and encourage the project's first investors. It is divided into three categories: Gold, Silver, and Bronze, with different benefit levels based on investment amount.",
+      "categoryGold": "GOLD Category",
+      "categorySilver": "SILVER Category",
+      "categoryBronze": "BRONZE Category",
+      "minInvestment": "Minimum Investment Amount",
+      "insuranceCoverage": "Insurance Coverage:",
+      "monthlyReward": "Monthly Reward:",
+      "maxReward": "Maximum Reward:",
+      "mostPopular": "MOST POPULAR",
+      "benefitsTitle": "🎁 Bank Insurance Benefits",
+      "rewardValidity": "Reward Validity",
+      "rewardValidityDesc": "Guaranteed for up to 24 months while the investor maintains the invested amount.",
+      "directPayments": "Direct Payments",
+      "directPaymentsDesc": "Monthly rewards will be paid in USDT directly to the investor's wallet.",
+      "insuranceActivation": "Insurance Activation",
+      "insuranceActivationDesc": "If, after 6 months, the $GEG token shows significant devaluation, the insurance can be activated.",
+      "exclusiveClub": "Secure Your Spot in the Exclusive Club!",
+      "exclusiveClubDesc": "Only the first 100 investors will have access to these unique benefits.",
+      "investNow": "Invest Now",
+      "disclaimer": "⚠️ Important:",
+      "disclaimerText": "The acquisition of the Golden Eggs Bank Insurance will be finalized after the pre-sale ends.",
+      
+      // Roadmap
+      "roadmapTitle": "Development Roadmap",
+      "roadmapSubtitle": "Our development and expansion journey",
+      "phase1": "Phase 1: Foundation and Launch",
+      "phase1Item1": "Construction of 4 initial sheds, with capacity for 1,000 laying hens each",
+      "phase1Item2": "Initial acquisition of 4,000 high-quality laying hens",
+      "phase1Item3": "Development and publication of the official Whitepaper and project website",
+      "phase1Item4": "Audit and implementation of the $GEG token Smart Contract",
+      "phase2": "Phase 2: Expansion and Verticalization",
+      "phase2Item1": "Construction of 10 additional sheds to scale production",
+      "phase2Item2": "Acquisition of 10,000 new laying hens to meet growing demand",
+      "phase2Item3": "Development of strategic partnerships in the agribusiness sector",
+      "phase2Item4": "Implementation of own feed factory to optimize costs",
+      "phase3": "Phase 3: Self-Sufficiency and Market Growth",
+      "phase3Item1": "Construction of 10 more sheds, consolidating production capacity",
+      "phase3Item2": "Acquisition of 10,000 additional laying hens",
+      "phase3Item3": "Establishment of own hatchery for chick production",
+      "phase4": "Phase 4: Consolidation and Technological Innovation",
+      "phase4Item1": "Logistics optimization for direct sales to end consumers",
+      "phase4Item2": "Launch of a teaching platform for new poultry farmers",
+      "phase4Item3": "Development of own app for egg delivery",
+      "phase4Item4": "Expansion of $GEG token presence on new exchanges",
+      "roadmapFooter": "All milestones have been carefully planned to maximize value for our investors and ensure sustainable project growth.",
+      
+      // Team
+      "teamTitle": "Our Team",
+      "teamSubtitle": "Meet the professionals who make Golden Eggs happen",
+      "tulioRole": "CEO",
+      "tulioDesc": "Owner of Ze's Group Community, Túlio leads Golden Eggs with his vast experience in communities and digital markets, bringing an innovative vision to the tokenized agricultural sector.",
+      "marcosRole": "CCO",
+      "marcosDesc": "Partner, Administrative Analyst and Digital Marketing",
+      "luizRole": "Partner / Sales / Billing",
+      "luizDesc": "Financial assistant providing support to the company's financial operations. Involves analyzing accounts payable and receivable control, issuing invoices and monitoring financial transactions.",
+      
+      // Contact
+      "contactTitle": "Join Our Community",
+      "contactSubtitle": "Stay updated on all news and actively participate in Golden Eggs' future",
+      "official": "Official",
+      
+      // Footer
+      "footerText": "© 2025 Golden Eggs RWA. All rights reserved.",
+      "footerDescription": "Investing in the future of poultry farming with blockchain security."
+    }
+  },
+  es: {
+    translation: {
+      // Header
+      "about": "Acerca",
+      "tokenomics": "Tokenomics",
+      "benefits": "Beneficios",
+      "roadmap": "Hoja de Ruta",
+      "team": "Equipo",
+      "contact": "Contacto",
+      "visitWebsite": "VISITE EL SITIO CORPORATIVO",
+      
+      // Hero
+      "heroTitle": "GOLDEN EGGS RWA",
+      "heroSubtitle": "Invirtiendo en el Futuro de la Avicultura",
+      "heroSubtitle2": "con la Seguridad de Blockchain.",
+      "heroDescription": "Conectando al inversor digital con el mercado más resiliente del mundo: la producción de huevos.",
+      "totalSupply": "Suministro Total",
+      "initialPrice": "Precio Inicial",
+      "realWorldAsset": "Activo del Mundo Real",
+      "participateSale": "Participar en la Venta",
+      "knowProject": "Conoce el Proyecto",
+      "audited": "Auditado",
+      "realBacking": "Respaldo Real",
+      "transparent": "Transparente",
+      
+      // About
+      "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
+      "aboutDescription": "Invirtiendo en el Futuro de la Avicultura con la Seguridad de Blockchain. Golden Eggs ($GEG) es un proyecto innovador de Activo del Mundo Real (RWA) que conecta directamente al inversor digital con uno de los mercados más resilientes del mundo: la producción de huevos. Al tokenizar las operaciones de una granja avícola, ofrecemos transparencia, liquidez y una oportunidad de inversión tangible y sostenible.",
+      "institutionalSecurity": "Seguridad Institucional",
+      "institutionalSecurityDesc": "Activos respaldados por operaciones reales del sector agropecuario, garantizando solidez y estabilidad para su inversión.",
+      "corporateGovernance": "Gobernanza Corporativa",
+      "corporateGovernanceDesc": "Prácticas rigurosas de gestión y transparencia, alineadas con los más altos estándares del mercado.",
+      "consistentResults": "Resultados Consistentes",
+      "consistentResultsDesc": "Estrategia de crecimiento sostenible, enfocada en resultados a largo plazo.",
+      
+      // Tokenomics
+      "tokenomicsTitle": "Tokenomics",
+      "tokenomicsSubtitle": "Distribución transparente y sostenible del token Golden Eggs ($GEG)",
+      "tokenDistribution": "Distribución del Token",
+      "farmExpansion": "Expansión de la Granja (Tesorería del Proyecto)",
+      "liquidity": "Liquidez",
+      "marketing": "Marketing",
+      "maintenance": "Mantenimiento y Operaciones",
+      "transactionFees": "Tarifas de Transacción",
+      "buyFee": "Tarifa de Compra (5%)",
+      "burn": "Quema",
+      "sellFee": "Tarifa de Venta (15%)",
+      "usdtReflections": "Reflexiones en USDT",
+      "totalSupplyLabel": "Suministro Total",
+      
+      // Seguro Bank
+      "seguroBankTitle": "🏦 Club de Seguro Bank Golden Eggs",
+      "seguroBankSubtitle": "Exclusivo para los primeros 100 inversores del token $GEG",
+      "seguroBankDescription": "El Seguro Bank Golden Eggs es un programa especial de protección y recompensas creado para apoyar e incentivar a los primeros inversores del proyecto. Está dividido en tres categorías: Oro, Plata y Bronce, con diferentes niveles de beneficios basados en el monto invertido.",
+      "categoryGold": "Categoría ORO",
+      "categorySilver": "Categoría PLATA",
+      "categoryBronze": "Categoría BRONCE",
+      "minInvestment": "Monto Mínimo de Inversión",
+      "insuranceCoverage": "Cobertura del Seguro:",
+      "monthlyReward": "Recompensa Mensual:",
+      "maxReward": "Recompensa Máxima:",
+      "mostPopular": "MÁS POPULAR",
+      "benefitsTitle": "🎁 Beneficios del Seguro Bank",
+      "rewardValidity": "Validez de las Recompensas",
+      "rewardValidityDesc": "Garantizadas por hasta 24 meses mientras el inversor mantenga el monto invertido.",
+      "directPayments": "Pagos Directos",
+      "directPaymentsDesc": "Las recompensas mensuales se pagarán en USDT directamente en la billetera del inversor.",
+      "insuranceActivation": "Activación del Seguro",
+      "insuranceActivationDesc": "Si, después de 6 meses, el token $GEG presenta una devaluación significativa, el seguro podrá ser activado.",
+      "exclusiveClub": "¡Asegura tu Lugar en el Club Exclusivo!",
+      "exclusiveClubDesc": "Solo los primeros 100 inversores tendrán acceso a estos beneficios únicos.",
+      "investNow": "Invertir Ahora",
+      "disclaimer": "⚠️ Importante:",
+      "disclaimerText": "La adquisición del Seguro Bank Golden Eggs se finalizará después del término de la preventa.",
+      
+      // Roadmap
+      "roadmapTitle": "Hoja de Ruta de Desarrollo",
+      "roadmapSubtitle": "Nuestro viaje de desarrollo y expansión",
+      "phase1": "Fase 1: Fundación y Lanzamiento",
+      "phase1Item1": "Construcción de 4 galpones iniciales, con capacidad para 1.000 aves ponedoras cada uno",
+      "phase1Item2": "Adquisición inicial de 4.000 aves ponedoras de alta calidad",
+      "phase1Item3": "Desarrollo y publicación del Whitepaper oficial y del sitio web del proyecto",
+      "phase1Item4": "Auditoría e implementación del contrato inteligente (Smart Contract) del token $GEG",
+      "phase2": "Fase 2: Expansión y Verticalización",
+      "phase2Item1": "Construcción de 10 galpones adicionales para escalar la producción",
+      "phase2Item2": "Adquisición de 10.000 nuevas aves ponedoras para atender la creciente demanda",
+      "phase2Item3": "Desarrollo de alianzas estratégicas en el sector agroindustrial",
+      "phase2Item4": "Implementación de una fábrica propia de piensos para optimizar costos",
+      "phase3": "Fase 3: Autosuficiencia y Crecimiento de Mercado",
+      "phase3Item1": "Construcción de 10 galpones más, consolidando la capacidad productiva",
+      "phase3Item2": "Adquisición de 10.000 aves ponedoras adicionales",
+      "phase3Item3": "Establecimiento de una matriz propia para la producción de pollitas",
+      "phase4": "Fase 4: Consolidación e Innovación Tecnológica",
+      "phase4Item1": "Optimización de la logística para venta directa al consumidor final",
+      "phase4Item2": "Lanzamiento de una plataforma de enseñanza para nuevos avicultores",
+      "phase4Item3": "Desarrollo de una aplicación propia para entrega de huevos",
+      "phase4Item4": "Expansión de la presencia del token $GEG en nuevos exchanges",
+      "roadmapFooter": "Todos los hitos han sido cuidadosamente planificados para maximizar el valor para nuestros inversores y garantizar el crecimiento sostenible del proyecto.",
+      
+      // Team
+      "teamTitle": "Nuestro Equipo",
+      "teamSubtitle": "Conoce a los profesionales que hacen que Golden Eggs suceda",
+      "tulioRole": "CEO",
+      "tulioDesc": "Propietario de la Comunidad Ze's Group, Túlio lidera Golden Eggs con su vasta experiencia en comunidades y mercados digitales, aportando una visión innovadora al sector agropecuario tokenizado.",
+      "marcosRole": "CCO",
+      "marcosDesc": "Socio, Analista administrativo y marketing digital",
+      "luizRole": "Socio / Ventas / Facturación",
+      "luizDesc": "Asistente financiero brindando soporte a las operaciones financieras de la empresa. Implica analizar el control de cuentas por pagar y cobrar, emisión de facturas y seguimiento de transacciones financieras.",
+      
+      // Contact
+      "contactTitle": "Únete a Nuestra Comunidad",
+      "contactSubtitle": "Mantente al tanto de todas las novedades y participa activamente en el futuro de Golden Eggs",
+      "official": "Oficial",
+      
+      // Footer
+      "footerText": "© 2025 Golden Eggs RWA. Todos los derechos reservados.",
+      "footerDescription": "Invirtiendo en el futuro de la avicultura con la seguridad de blockchain."
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'pt', // idioma padrão
+    fallbackLng: 'pt',
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n;
+

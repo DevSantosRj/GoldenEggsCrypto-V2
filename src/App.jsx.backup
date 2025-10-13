@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink } from 'lucide-react'
-import LanguageSelector from './components/LanguageSelector'
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
 import luizImg from './assets/luiz-oliveira.webp'
@@ -13,7 +11,6 @@ import logoHeaderImg from './assets/golden-eggs-logo-header-transparent.png'
 import './App.css'
 
 function App() {
-  const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
@@ -41,18 +38,17 @@ function App() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-6">
-              <button onClick={() => scrollToSection('sobre')} className="hover:text-yellow-400 transition-colors">{t('about')}</button>
-              <button onClick={() => scrollToSection('tokenomics')} className="hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
-              <button onClick={() => scrollToSection('beneficios')} className="hover:text-yellow-400 transition-colors">{t('benefits')}</button>
-              <button onClick={() => scrollToSection('roadmap')} className="hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
-              <button onClick={() => scrollToSection('equipe')} className="hover:text-yellow-400 transition-colors">{t('team')}</button>
-              <button onClick={() => scrollToSection('contato')} className="hover:text-yellow-400 transition-colors">{t('contact')}</button>
-              <LanguageSelector />
+              <button onClick={() => scrollToSection('sobre')} className="hover:text-yellow-400 transition-colors">Sobre</button>
+              <button onClick={() => scrollToSection('tokenomics')} className="hover:text-yellow-400 transition-colors">Tokenomics</button>
+              <button onClick={() => scrollToSection('beneficios')} className="hover:text-yellow-400 transition-colors">Benefícios</button>
+              <button onClick={() => scrollToSection('roadmap')} className="hover:text-yellow-400 transition-colors">Roadmap</button>
+              <button onClick={() => scrollToSection('equipe')} className="hover:text-yellow-400 transition-colors">Equipe</button>
+              <button onClick={() => scrollToSection('contato')} className="hover:text-yellow-400 transition-colors">Contato</button>
               <Button 
                 className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold"
                 onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
               >
-                {t('visitWebsite')}
+                VISITE O SITE EMPRESARIAL
               </Button>
             </div>
 
@@ -65,20 +61,17 @@ function App() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-3">
-              <button onClick={() => scrollToSection('sobre')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('about')}</button>
-              <button onClick={() => scrollToSection('tokenomics')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
-              <button onClick={() => scrollToSection('beneficios')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('benefits')}</button>
-              <button onClick={() => scrollToSection('roadmap')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
-              <button onClick={() => scrollToSection('equipe')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('team')}</button>
-              <button onClick={() => scrollToSection('contato')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('contact')}</button>
-              <div className="py-2">
-                <LanguageSelector />
-              </div>
+              <button onClick={() => scrollToSection('sobre')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Sobre</button>
+              <button onClick={() => scrollToSection('tokenomics')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Tokenomics</button>
+              <button onClick={() => scrollToSection('beneficios')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Benefícios</button>
+              <button onClick={() => scrollToSection('roadmap')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Roadmap</button>
+              <button onClick={() => scrollToSection('equipe')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Equipe</button>
+              <button onClick={() => scrollToSection('contato')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Contato</button>
               <Button 
                 className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold"
                 onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
               >
-                {t('visitWebsite')}
+                VISITE O SITE EMPRESARIAL
               </Button>
             </div>
           )}
@@ -95,14 +88,14 @@ function App() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
-            {t('heroTitle')}
+            GOLDEN EGGS RWA
           </h1>
           <p className="text-2xl md:text-3xl mb-4 text-yellow-400 font-semibold">($GEG)</p>
           <p className="text-xl md:text-2xl mb-8 text-slate-300 max-w-3xl mx-auto">
-            <span className="text-yellow-400 font-semibold">{t('heroSubtitle')}</span> {t('heroSubtitle2')}
+            <span className="text-yellow-400 font-semibold">Investindo no Futuro da Avicultura</span> com a Segurança da Blockchain.
           </p>
           <p className="text-lg md:text-xl mb-12 text-slate-400 max-w-2xl mx-auto">
-            {t('heroDescription')}
+            Conectando o investidor digital ao mercado mais resiliente do mundo: a produção de ovos.
           </p>
 
           {/* Stats Cards */}
@@ -110,19 +103,19 @@ function App() {
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">200M</div>
-                <div className="text-slate-400">{t('totalSupply')}</div>
+                <div className="text-slate-400">Total Supply</div>
               </CardContent>
             </Card>
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">$0.0024</div>
-                <div className="text-slate-400">{t('initialPrice')}</div>
+                <div className="text-slate-400">Preço Inicial</div>
               </CardContent>
             </Card>
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">RWA</div>
-                <div className="text-slate-400">{t('realWorldAsset')}</div>
+                <div className="text-slate-400">Real World Asset</div>
               </CardContent>
             </Card>
           </div>
@@ -134,7 +127,7 @@ function App() {
               className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-lg px-8 py-6"
               onClick={() => window.open('https://criptonopix.app.br', '_blank')}
             >
-              {t('participateSale')} <ExternalLink className="ml-2" size={20} />
+              Participar da Venda <ExternalLink className="ml-2" size={20} />
             </Button>
             <Button 
               size="lg" 
