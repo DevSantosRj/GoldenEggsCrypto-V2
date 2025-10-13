@@ -142,7 +142,7 @@ function App() {
               className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-950 text-lg px-8 py-6"
               onClick={() => scrollToSection('sobre')}
             >
-              Conheça o Projeto
+              {t('knowProject')} <ChevronDown className="ml-2" size={20} />
             </Button>
           </div>
 
@@ -165,10 +165,10 @@ function App() {
       <section id="sobre" className="py-20 px-4 bg-slate-900/30">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-            GOLDEN EGGS RWA ($GEG)
+            {t('aboutTitle')}
           </h2>
           <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-12 text-center leading-relaxed">
-            <strong className="text-yellow-400">Golden Eggs ($GEG)</strong> é um projeto inovador de <strong>Ativo do Mundo Real (RWA - Real World Asset)</strong> que conecta o investidor digital diretamente a um dos mercados mais resilientes do mundo: a produção de ovos. Ao tokenizar as operações de uma granja avícola, oferecemos transparência, liquidez e uma oportunidade de investimento tangível e sustentável.
+            {t('aboutDescription')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -177,7 +177,7 @@ function App() {
                 <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="text-yellow-400" size={24} />
                 </div>
-                <CardTitle className="text-yellow-400">Segurança Institucional</CardTitle>
+                <CardTitle className="text-yellow-400">{t('institutionalSecurity')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300">
@@ -191,7 +191,7 @@ function App() {
                 <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Users className="text-yellow-400" size={24} />
                 </div>
-                <CardTitle className="text-yellow-400">Governança Corporativa</CardTitle>
+                <CardTitle className="text-yellow-400">{t('corporateGovernance')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300">
@@ -205,7 +205,7 @@ function App() {
                 <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="text-yellow-400" size={24} />
                 </div>
-                <CardTitle className="text-yellow-400">Resultados Consistentes</CardTitle>
+                <CardTitle className="text-yellow-400">{t('consistentResults')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300">
