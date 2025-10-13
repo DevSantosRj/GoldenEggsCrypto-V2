@@ -41,8 +41,11 @@ function App() {
               <button onClick={() => scrollToSection('roadmap')} className="hover:text-yellow-400 transition-colors">Roadmap</button>
               <button onClick={() => scrollToSection('equipe')} className="hover:text-yellow-400 transition-colors">Equipe</button>
               <button onClick={() => scrollToSection('contato')} className="hover:text-yellow-400 transition-colors">Contato</button>
-              <Button className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold">
-                Conectar Carteira
+              <Button 
+                className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold"
+                onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
+              >
+                VISITE O SITE EMPRESARIAL
               </Button>
             </div>
 
@@ -61,8 +64,11 @@ function App() {
               <button onClick={() => scrollToSection('roadmap')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Roadmap</button>
               <button onClick={() => scrollToSection('equipe')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Equipe</button>
               <button onClick={() => scrollToSection('contato')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">Contato</button>
-              <Button className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold">
-                Conectar Carteira
+              <Button 
+                className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold"
+                onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
+              >
+                VISITE O SITE EMPRESARIAL
               </Button>
             </div>
           )}
