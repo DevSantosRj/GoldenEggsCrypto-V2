@@ -6,8 +6,8 @@ import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
 import luizImg from './assets/luiz-oliveira.webp'
-import logoImg from './assets/golden-eggs-logo.webp'
-import logoHeaderImg from './assets/golden-eggs-logo-header.webp'
+import logoImg from './assets/golden-eggs-logo-transparent.png'
+import logoHeaderImg from './assets/golden-eggs-logo-header-transparent.png'
 import './App.css'
 
 function App() {
