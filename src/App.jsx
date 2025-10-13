@@ -231,13 +231,13 @@ function App() {
             {/* Distribuição do Token */}
             <Card className="bg-slate-900/50 border-slate-800">
               <CardHeader>
-                <CardTitle className="text-2xl text-yellow-400">Distribuição do Token</CardTitle>
-                <CardDescription className="text-slate-400">Supply Total: 200.000.000 $GEG</CardDescription>
+                <CardTitle className="text-2xl text-yellow-400">{t('tokenDistribution')}</CardTitle>
+                <CardDescription className="text-slate-400">{t('totalSupplyLabel')}: 200.000.000 $GEG</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
-                    <span className="text-slate-300">Expansão da Granja (Tesouraria)</span>
+                    <span className="text-slate-300">{t('farmExpansion')}</span>
                     <span className="text-yellow-400 font-bold">75%</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
@@ -259,11 +259,11 @@ function App() {
             {/* Taxas de Transação */}
             <Card className="bg-slate-900/50 border-slate-800">
               <CardHeader>
-                <CardTitle className="text-2xl text-yellow-400">Taxas de Transação</CardTitle>
+                <CardTitle className="text-2xl text-yellow-400">{t('transactionFees')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-green-400 mb-3">Taxa de Compra: 5%</h4>
+                  <h4 className="text-lg font-semibold text-green-400 mb-3">{t('buyFee')}</h4>
                   <div className="space-y-2 pl-4">
                     <div className="flex justify-between items-center">
                       <span className="text-slate-300">{t('burn')}</span>
@@ -281,7 +281,7 @@ function App() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-red-400 mb-3">Taxa de Venda: 15%</h4>
+                  <h4 className="text-lg font-semibold text-red-400 mb-3">{t('sellFee')}</h4>
                   <div className="space-y-2 pl-4">
                     <div className="flex justify-between items-center">
                       <span className="text-slate-300">{t('burn')}</span>
@@ -482,7 +482,7 @@ function App() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-slate-950 font-bold">1</div>
-                  <CardTitle className="text-2xl text-yellow-400">Fase 1: Fundação e Lançamento</CardTitle>
+                  <CardTitle className="text-2xl text-yellow-400">{t('phase1')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -512,7 +512,7 @@ function App() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">2</div>
-                  <CardTitle className="text-2xl text-slate-300">Fase 2: Expansão e Verticalização</CardTitle>
+                  <CardTitle className="text-2xl text-slate-300">{t('phase2')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -542,7 +542,7 @@ function App() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">3</div>
-                  <CardTitle className="text-2xl text-slate-300">Fase 3: Autossuficiência e Crescimento de Mercado</CardTitle>
+                  <CardTitle className="text-2xl text-slate-300">{t('phase3')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -557,7 +557,7 @@ function App() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Target className="text-slate-500 mt-1 flex-shrink-0" size={20} />
-                    <span>Estabelecimento de matriz própria para produção de pintainhas</span>
+                    <span>{t('phase3Item3')}</span>
                   </li>
                 </ul>
               </CardContent>
@@ -568,7 +568,7 @@ function App() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">4</div>
-                  <CardTitle className="text-2xl text-slate-300">Fase 4: Consolidação e Inovação Tecnológica</CardTitle>
+                  <CardTitle className="text-2xl text-slate-300">{t('phase4')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -579,11 +579,11 @@ function App() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Rocket className="text-slate-500 mt-1 flex-shrink-0" size={20} />
-                    <span>Lançamento de plataforma de ensino para novos avicultores</span>
+                    <span>{t('phase4Item2')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Rocket className="text-slate-500 mt-1 flex-shrink-0" size={20} />
-                    <span>Desenvolvimento de aplicativo próprio para delivery de ovos caipiras</span>
+                    <span>{t('phase4Item3')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Rocket className="text-slate-500 mt-1 flex-shrink-0" size={20} />
@@ -650,7 +650,7 @@ function App() {
                   <img src={luizImg} alt="Luiz Oliveira" className="w-full h-full object-cover" />
                 </div>
                 <CardTitle className="text-center text-yellow-400">Luiz Oliveira</CardTitle>
-                <CardDescription className="text-center text-slate-400">Sócio / Vendas / Faturamento</CardDescription>
+                <CardDescription className="text-center text-slate-400">{t('luizRole')}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300 text-sm text-center">
@@ -682,7 +682,7 @@ function App() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-slate-300">@GoldenEggsrwa</p>
-                <Badge className="mt-2 bg-blue-500">Oficial</Badge>
+                <Badge className="mt-2 bg-blue-500">{t('official')}</Badge>
               </CardContent>
             </Card>
 
@@ -695,7 +695,7 @@ function App() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-slate-300">@goldeneggsalpha</p>
-                <Badge className="mt-2 bg-cyan-500">Oficial</Badge>
+                <Badge className="mt-2 bg-cyan-500">{t('official')}</Badge>
               </CardContent>
             </Card>
 
@@ -708,7 +708,7 @@ function App() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-slate-300">@goldeneggsrwa</p>
-                <Badge className="mt-2 bg-pink-500">Oficial</Badge>
+                <Badge className="mt-2 bg-pink-500">{t('official')}</Badge>
               </CardContent>
             </Card>
           </div>
