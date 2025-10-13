@@ -447,6 +447,13 @@ function App() {
               >
                 Investir Agora <ExternalLink className="ml-2" size={20} />
               </Button>
+              
+              {/* Disclaimer */}
+              <div className="mt-6 p-4 bg-slate-800/50 border border-yellow-500/30 rounded-lg max-w-2xl mx-auto">
+                <p className="text-slate-300 text-sm">
+                  <span className="text-yellow-400 font-semibold">⚠️ Importante:</span> A aquisição do Seguro Bank Golden Eggs será finalizada após o término da pré-venda.
+                </p>
+              </div>
             </div>
           </div>
         </div>
