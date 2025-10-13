@@ -6,6 +6,8 @@ import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
 import luizImg from './assets/luiz-oliveira.webp'
+import logoImg from './assets/golden-eggs-logo.webp'
+import logoHeaderImg from './assets/golden-eggs-logo-header.webp'
 import './App.css'
 
 function App() {
@@ -28,9 +30,7 @@ function App() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-full flex items-center justify-center font-bold text-slate-950">
-                GEG
-              </div>
+              <img src={logoHeaderImg} alt="Golden Eggs Logo" className="w-12 h-12 rounded-full" />
               <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 GOLDEN EGGS
               </span>
@@ -82,8 +82,8 @@ function App() {
       <section id="home" className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/50 animate-pulse">
-              <span className="text-4xl font-bold text-slate-950">GEG</span>
+            <div className="w-40 h-40 rounded-full shadow-2xl shadow-yellow-500/50">
+              <img src={logoImg} alt="Golden Eggs Logo" className="w-full h-full rounded-full" />
             </div>
           </div>
 
