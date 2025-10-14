@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge.jsx'
 import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink, Copy, Check } from 'lucide-react'
 import LanguageSelector from './components/LanguageSelector'
+import SwapWidget from './components/SwapWidget'
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
 import luizImg from './assets/luiz-oliveira.webp'
