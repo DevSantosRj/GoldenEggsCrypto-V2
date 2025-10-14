@@ -30,17 +30,17 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Header/Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src={logoHeaderImg} alt="Golden Eggs Logo" className="w-12 h-12 rounded-full" />
-              <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+              <img src={logoHeaderImg} alt="Golden Eggs Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full" />
+              <span className="text-base sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 GOLDEN EGGS
               </span>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-6">
               <button onClick={() => scrollToSection('sobre')} className="hover:text-yellow-400 transition-colors">{t('about')}</button>
               <button onClick={() => scrollToSection('tokenomics')} className="hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
               <button onClick={() => scrollToSection('beneficios')} className="hover:text-yellow-400 transition-colors">{t('benefits')}</button>
@@ -50,6 +50,22 @@ function App() {
               <LanguageSelector />
               <Button 
                 className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold"
+                onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
+              >
+                {t('visitWebsite')}
+              </Button>
+            </div>
+
+            {/* Tablet Menu */}
+            <div className="hidden md:flex lg:hidden items-center gap-3">
+              <button onClick={() => scrollToSection('sobre')} className="text-sm hover:text-yellow-400 transition-colors">{t('about')}</button>
+              <button onClick={() => scrollToSection('tokenomics')} className="text-sm hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
+              <button onClick={() => scrollToSection('beneficios')} className="text-sm hover:text-yellow-400 transition-colors">{t('benefits')}</button>
+              <button onClick={() => scrollToSection('roadmap')} className="text-sm hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
+              <LanguageSelector />
+              <Button 
+                size="sm"
+                className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-xs"
                 onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
               >
                 {t('visitWebsite')}
