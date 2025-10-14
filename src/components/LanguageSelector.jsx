@@ -16,19 +16,20 @@ const LanguageSelector = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe size={18} className="text-yellow-400" />
-      <div className="flex gap-1">
+      <Globe size={18} className="text-yellow-400 hidden sm:block" />
+      <div className="flex gap-1 sm:gap-2">
         {languages.map((lang) => (
           <button
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className={`px-2 py-1 rounded text-sm font-medium transition-all ${
+            className={`px-2 py-1 rounded text-xs sm:text-sm font-medium transition-all ${
               i18n.language === lang.code
                 ? 'bg-yellow-500 text-slate-950'
                 : 'text-slate-400 hover:text-yellow-400'
             }`}
           >
-            {lang.flag} {lang.name}
+            <span className="sm:hidden">{lang.flag}</span>
+            <span className="hidden sm:inline">{lang.flag} {lang.name}</span>
           </button>
         ))}
       </div>

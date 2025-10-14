@@ -89,24 +89,24 @@ function App() {
       <section id="home" className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8 flex justify-center">
-            <div className="w-40 h-40 rounded-full shadow-2xl shadow-yellow-500/50">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full shadow-2xl shadow-yellow-500/50">
               <img src={logoImg} alt="Golden Eggs Logo" className="w-full h-full rounded-full" />
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
             {t('heroTitle')}
           </h1>
-          <p className="text-2xl md:text-3xl mb-4 text-yellow-400 font-semibold">($GEG)</p>
-          <p className="text-xl md:text-2xl mb-8 text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl md:text-3xl mb-4 text-yellow-400 font-semibold">($GEG)</p>
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 text-slate-300 max-w-3xl mx-auto px-4">
             <span className="text-yellow-400 font-semibold">{t('heroSubtitle')}</span> {t('heroSubtitle2')}
           </p>
-          <p className="text-lg md:text-xl mb-12 text-slate-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-12 text-slate-400 max-w-2xl mx-auto px-4">
             {t('heroDescription')}
           </p>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12 px-4">
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">200M</div>
@@ -128,7 +128,7 @@ function App() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-lg px-8 py-6"
@@ -147,7 +147,7 @@ function App() {
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mt-12 px-4">
             <Badge variant="outline" className="border-green-500 text-green-400 px-4 py-2 text-sm">
               <CheckCircle2 className="mr-2" size={16} /> {t('audited')}
             </Badge>
@@ -162,16 +162,16 @@ function App() {
       </section>
 
       {/* Sobre Section */}
-      <section id="sobre" className="py-20 px-4 bg-slate-900/30">
+      <section id="sobre" className="py-12 sm:py-16 md:py-20 px-4 bg-slate-900/30">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent px-4">
             {t('aboutTitle')}
           </h2>
           <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-12 text-center leading-relaxed">
             {t('aboutDescription')}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto px-4">
             <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-yellow-500 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20">
               <CardHeader>
                 <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -218,7 +218,7 @@ function App() {
       </section>
 
       {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-20 px-4">
+      <section id="tokenomics" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
             {t('tokenomicsTitle')}
@@ -227,7 +227,7 @@ function App() {
             {t('tokenomicsSubtitle')}
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto px-4">
             {/* Distribuição do Token */}
             <Card className="bg-slate-900/50 border-slate-800">
               <CardHeader>
@@ -304,7 +304,7 @@ function App() {
       </section>
 
       {/* Clube Seguro Bank Section */}
-      <section id="beneficios" className="py-20 px-4 bg-slate-900/30">
+      <section id="beneficios" className="py-12 sm:py-16 md:py-20 px-4 bg-slate-900/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
@@ -316,7 +316,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto mb-8 sm:mb-12 px-4">
             {/* Ouro */}
             <Card className="bg-gradient-to-br from-yellow-600 to-yellow-800 border-yellow-500 relative overflow-hidden">
               <div className="absolute top-4 right-4">
@@ -408,7 +408,7 @@ function App() {
           {/* Benefícios */}
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-center mb-8 text-yellow-400">{t('benefitsTitle')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-4">
               <Card className="bg-slate-900/50 border-slate-800">
                 <CardHeader>
                   <CardTitle className="text-lg text-yellow-400">{t('rewardValidity')}</CardTitle>
@@ -467,7 +467,7 @@ function App() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-20 px-4">
+      <section id="roadmap" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
             {t('roadmapTitle')}
@@ -601,7 +601,7 @@ function App() {
       </section>
 
       {/* Equipe Section */}
-      <section id="equipe" className="py-20 px-4 bg-slate-900/30">
+      <section id="equipe" className="py-12 sm:py-16 md:py-20 px-4 bg-slate-900/30">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
             {t('teamTitle')}
@@ -663,7 +663,7 @@ function App() {
       </section>
 
       {/* Contato/Comunidade Section */}
-      <section id="contato" className="py-20 px-4">
+      <section id="contato" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
             {t('contactTitle')}
