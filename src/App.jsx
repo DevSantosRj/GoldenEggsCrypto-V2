@@ -56,31 +56,15 @@ function App() {
               </Button>
             </div>
 
-            {/* Tablet Menu */}
-            <div className="hidden md:flex lg:hidden items-center gap-3">
-              <button onClick={() => scrollToSection('sobre')} className="text-sm hover:text-yellow-400 transition-colors">{t('about')}</button>
-              <button onClick={() => scrollToSection('tokenomics')} className="text-sm hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
-              <button onClick={() => scrollToSection('beneficios')} className="text-sm hover:text-yellow-400 transition-colors">{t('benefits')}</button>
-              <button onClick={() => scrollToSection('roadmap')} className="text-sm hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
-              <LanguageSelector />
-              <Button 
-                size="sm"
-                className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-xs"
-                onClick={() => window.open('https://goldeneggsrwa.com', '_blank')}
-              >
-                {t('visitWebsite')}
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+            {/* Mobile/Tablet Menu Button */}
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile/Tablet Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-3">
+            <div className="lg:hidden mt-4 pb-4 space-y-3">
               <button onClick={() => scrollToSection('sobre')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('about')}</button>
               <button onClick={() => scrollToSection('tokenomics')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
               <button onClick={() => scrollToSection('beneficios')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('benefits')}</button>
