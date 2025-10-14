@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
-import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink } from 'lucide-react'
+import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink, Copy, Check } from 'lucide-react'
 import LanguageSelector from './components/LanguageSelector'
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
@@ -16,6 +16,7 @@ function App() {
   const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const [copied, setCopied] = useState(false)
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -24,6 +25,13 @@ function App() {
       setIsMenuOpen(false)
       setActiveSection(sectionId)
     }
+  }
+
+  const copyContract = () => {
+    const contractAddress = '0xaeded60cbadd688279908df18194fd31387baeb4'
+    navigator.clipboard.writeText(contractAddress)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   return (
@@ -157,6 +165,37 @@ function App() {
             <Badge variant="outline" className="border-purple-500 text-purple-400 px-4 py-2 text-sm">
               <TrendingUp className="mr-2" size={16} /> {t('transparent')}
             </Badge>
+          </div>
+
+          {/* Contract Address */}
+          <div className="mt-8 flex justify-center px-4">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4 max-w-2xl w-full">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="flex-1 text-center sm:text-left">
+                  <p className="text-slate-400 text-sm mb-1">{t('contractAddress')}</p>
+                  <p className="text-yellow-400 font-mono text-xs sm:text-sm break-all">
+                    0xaeded60cbadd688279908df18194fd31387baeb4
+                  </p>
+                </div>
+                <Button
+                  onClick={copyContract}
+                  className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold whitespace-nowrap"
+                  size="sm"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="mr-2" size={16} />
+                      {t('copied')}
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="mr-2" size={16} />
+                      {t('copyContract')}
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

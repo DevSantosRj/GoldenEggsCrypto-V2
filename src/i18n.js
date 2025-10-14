@@ -26,6 +26,12 @@ const resources = {
       "audited": "Auditado",
       "realBacking": "Lastro Real",
       "transparent": "Transparente",
+      "contractAddress": "Dirección del Contrato",
+      "copyContract": "Copiar Contrato",
+      "copied": "¡Copiado!",
+      "contractAddress": "Endereço do Contrato",
+      "copyContract": "Copiar Contrato",
+      "copied": "Copiado!",
       
       // About
       "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
@@ -145,6 +151,9 @@ const resources = {
       "audited": "Audited",
       "realBacking": "Real Backing",
       "transparent": "Transparent",
+      "contractAddress": "Contract Address",
+      "copyContract": "Copy Contract",
+      "copied": "Copied!",
       
       // About
       "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
@@ -264,6 +273,12 @@ const resources = {
       "audited": "Auditado",
       "realBacking": "Respaldo Real",
       "transparent": "Transparente",
+      "contractAddress": "Dirección del Contrato",
+      "copyContract": "Copiar Contrato",
+      "copied": "¡Copiado!",
+      "contractAddress": "Endereço do Contrato",
+      "copyContract": "Copiar Contrato",
+      "copied": "Copiado!",
       
       // About
       "aboutTitle": "GOLDEN EGGS RWA ($GEG)",
