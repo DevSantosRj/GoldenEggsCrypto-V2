@@ -106,7 +106,7 @@ function App() {
           </p>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12 px-4">
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">200M</div>
