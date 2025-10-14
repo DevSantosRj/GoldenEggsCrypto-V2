@@ -16,7 +16,7 @@ const LanguageSelector = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe size={18} className="text-yellow-400 hidden sm:block" />
+      <Globe size={18} className="text-yellow-400 hidden lg:block" />
       <div className="flex gap-1 sm:gap-2">
         {languages.map((lang) => (
           <button
@@ -28,8 +28,7 @@ const LanguageSelector = () => {
                 : 'text-slate-400 hover:text-yellow-400'
             }`}
           >
-            <span className="sm:hidden">{lang.flag}</span>
-            <span className="hidden sm:inline">{lang.flag} {lang.name}</span>
+            {lang.flag} <span className="hidden sm:inline">{lang.name}</span>
           </button>
         ))}
       </div>
@@ -38,3 +37,4 @@ const LanguageSelector = () => {
 };
 
 export default LanguageSelector;
+
