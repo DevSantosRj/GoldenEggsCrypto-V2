@@ -673,7 +673,7 @@ function App() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-blue-500 transition-all duration-300 cursor-pointer">
+            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-blue-500 transition-all duration-300 cursor-pointer" onClick={() => window.open('https://x.com/GoldenEggsrwa', '_blank')}>
               <CardHeader>
                 <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Twitter className="text-blue-400" size={32} />
@@ -686,7 +686,7 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer">
+            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer" onClick={() => window.open('https://t.me/goldeneggsalpha', '_blank')}>
               <CardHeader>
                 <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Send className="text-cyan-400" size={32} />
@@ -699,7 +699,7 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-pink-500 transition-all duration-300 cursor-pointer">
+            <Card className="bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700 hover:border-pink-500 transition-all duration-300 cursor-pointer" onClick={() => window.open('https://instagram.com/goldeneggsrwa', '_blank')}>
               <CardHeader>
                 <div className="w-16 h-16 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Instagram className="text-pink-400" size={32} />
