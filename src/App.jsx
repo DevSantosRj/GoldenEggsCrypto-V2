@@ -136,15 +136,12 @@ function App() {
             </Card>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-lg px-8 py-6"
-              onClick={() => window.open('https://criptonopix.app.br', '_blank')}
-            >
-              {t('participateSale')} <ExternalLink className="ml-2" size={20} />
-            </Button>
+          {/* Swap Widget */}
+          <div className="mt-12 px-4">
+            <SwapWidget />
+          </div>
+          
+          <div className="flex justify-center mt-6 px-4">
             <Button 
               size="lg" 
               variant="outline" 
