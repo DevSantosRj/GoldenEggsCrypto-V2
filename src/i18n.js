@@ -60,6 +60,12 @@ const resources = {
       "corporateGovernanceDesc": "Práticas rigorosas de gestão e transparência, alinhadas aos mais altos padrões do mercado.",
       "consistentResults": "Resultados Consistentes",
       "consistentResultsDesc": "Estratégia de crescimento sustentável, focada em resultados de longo prazo.",
+      "profitSharingTitle": "Participação nos Resultados",
+      "profitSharingDescription": "A Granja Golden Eggs RWA adotará um modelo de participação nos resultados, destinando 15% do lucro líquido à remuneração proporcional dos detentores do token $GEG. Essa estrutura visa alinhar os interesses entre o negócio físico e o ecossistema digital, promovendo transparência, valorização sustentável e engajamento da comunidade cripto.",
+      "profitShare": "Lucro Líquido Distribuído",
+      "transparency": "Transparência Total",
+      "community": "Comunidade Engajada",
+      "sustainableModel": "Modelo Sustentável",
       
       // Tokenomics
       "tokenomicsTitle": "Tokenomics",
@@ -191,6 +197,12 @@ const resources = {
       "corporateGovernanceDesc": "Rigorous management and transparency practices, aligned with the highest market standards.",
       "consistentResults": "Consistent Results",
       "consistentResultsDesc": "Sustainable growth strategy, focused on long-term results.",
+      "profitSharingTitle": "Profit Sharing",
+      "profitSharingDescription": "Golden Eggs RWA Farm will adopt a profit-sharing model, allocating 15% of net profit to proportional compensation for $GEG token holders. This structure aims to align interests between the physical business and the digital ecosystem, promoting transparency, sustainable appreciation, and crypto community engagement.",
+      "profitShare": "Net Profit Distributed",
+      "transparency": "Full Transparency",
+      "community": "Engaged Community",
+      "sustainableModel": "Sustainable Model",
       
       // Tokenomics
       "tokenomicsTitle": "Tokenomics",
@@ -334,6 +346,12 @@ const resources = {
       "corporateGovernanceDesc": "Prácticas rigurosas de gestión y transparencia, alineadas con los más altos estándares del mercado.",
       "consistentResults": "Resultados Consistentes",
       "consistentResultsDesc": "Estrategia de crecimiento sostenible, enfocada en resultados a largo plazo.",
+      "profitSharingTitle": "Participación en los Resultados",
+      "profitSharingDescription": "La Granja Golden Eggs RWA adoptará un modelo de participación en los resultados, destinando el 15% del beneficio neto a la remuneración proporcional de los poseedores del token $GEG. Esta estructura busca alinear los intereses entre el negocio físico y el ecosistema digital, promoviendo transparencia, valorización sostenible y compromiso de la comunidad cripto.",
+      "profitShare": "Beneficio Neto Distribuido",
+      "transparency": "Transparencia Total",
+      "community": "Comunidad Comprometida",
+      "sustainableModel": "Modelo Sostenible",
       
       // Tokenomics
       "tokenomicsTitle": "Tokenomics",
