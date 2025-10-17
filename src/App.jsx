@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
-import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink, Copy, Check } from 'lucide-react'
+import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink, Copy, Check, DollarSign, PieChart, Award } from 'lucide-react'
 import LanguageSelector from './components/LanguageSelector'
 import SwapWidget from './components/SwapWidget'
 import tulioImg from './assets/tulio-rodrigues.webp'
@@ -247,6 +247,79 @@ function App() {
               <CardContent>
                 <p className="text-slate-300">
                   {t('consistentResultsDesc')}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Profit Sharing Section */}
+      <section id="profit-sharing" className="py-12 sm:py-16 md:py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+              {t('profitSharingTitle')}
+            </h2>
+            <p className="text-lg text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
+              {t('profitSharingDescription')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
+            <Card className="bg-gradient-to-br from-green-900/30 to-slate-900 border-green-500/30 hover:border-green-400 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <DollarSign className="text-green-400" size={24} />
+                </div>
+                <CardTitle className="text-green-400 text-xl">{t('profitShare')}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-4xl font-bold text-green-400 mb-2">15%</div>
+                <p className="text-slate-400 text-sm">
+                  Do lucro líquido distribuído aos holders
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-blue-900/30 to-slate-900 border-blue-500/30 hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+              <CardHeader>
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="text-blue-400" size={24} />
+                </div>
+                <CardTitle className="text-blue-400 text-xl">{t('transparency')}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-300 text-sm">
+                  Relatórios financeiros transparentes e auditados regularmente
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-900/30 to-slate-900 border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+              <CardHeader>
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="text-purple-400" size={24} />
+                </div>
+                <CardTitle className="text-purple-400 text-xl">{t('community')}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-300 text-sm">
+                  Alinhamento de interesses entre negócio e comunidade cripto
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-yellow-900/30 to-slate-900 border-yellow-500/30 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20">
+              <CardHeader>
+                <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="text-yellow-400" size={24} />
+                </div>
+                <CardTitle className="text-yellow-400 text-xl">{t('sustainableModel')}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-300 text-sm">
+                  Crescimento sustentável com valorização de longo prazo
                 </p>
               </CardContent>
             </Card>
