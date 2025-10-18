@@ -52,7 +52,6 @@ function App() {
             <div className="hidden lg:flex items-center gap-6">
               <button onClick={() => scrollToSection('sobre')} className="hover:text-yellow-400 transition-colors">{t('about')}</button>
               <button onClick={() => scrollToSection('tokenomics')} className="hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
-              <button onClick={() => scrollToSection('beneficios')} className="hover:text-yellow-400 transition-colors">{t('benefits')}</button>
               <button onClick={() => scrollToSection('roadmap')} className="hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
               <button onClick={() => scrollToSection('equipe')} className="hover:text-yellow-400 transition-colors">{t('team')}</button>
               <button onClick={() => scrollToSection('contato')} className="hover:text-yellow-400 transition-colors">{t('contact')}</button>
@@ -76,7 +75,6 @@ function App() {
             <div className="lg:hidden mt-4 pb-4 space-y-3">
               <button onClick={() => scrollToSection('sobre')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('about')}</button>
               <button onClick={() => scrollToSection('tokenomics')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('tokenomics')}</button>
-              <button onClick={() => scrollToSection('beneficios')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('benefits')}</button>
               <button onClick={() => scrollToSection('roadmap')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('roadmap')}</button>
               <button onClick={() => scrollToSection('equipe')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('team')}</button>
               <button onClick={() => scrollToSection('contato')} className="block w-full text-left py-2 hover:text-yellow-400 transition-colors">{t('contact')}</button>
@@ -409,169 +407,6 @@ function App() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Clube Seguro Bank Section */}
-      <section id="beneficios" className="py-12 sm:py-16 md:py-20 px-4 bg-slate-900/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-              {t('seguroBankTitle')}
-            </h2>
-            <p className="text-xl text-slate-400">{t('seguroBankSubtitle')}</p>
-            <p className="text-lg text-slate-300 mt-4 max-w-3xl mx-auto">
-              {t('seguroBankDescription')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto mb-8 sm:mb-12 px-4">
-            {/* Ouro */}
-            <Card className="bg-gradient-to-br from-yellow-600 to-yellow-800 border-yellow-500 relative overflow-hidden">
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-yellow-400 text-slate-950">{t('mostPopular')}</Badge>
-              </div>
-              <CardHeader>
-                <div className="text-5xl mb-4">🥇</div>
-                <CardTitle className="text-2xl text-white">{t('categoryGold')}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-white">
-                <div>
-                  <p className="text-sm opacity-90">{t('minInvestment')}</p>
-                  <p className="text-3xl font-bold">$2.000</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>{t('insuranceCoverage')}</span>
-                    <span className="font-bold">100%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('monthlyReward')}</span>
-                    <span className="font-bold">$20 USDT</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('maxReward')}</span>
-                    <span className="font-bold">$2.000 USDT</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Prata */}
-            <Card className="bg-gradient-to-br from-slate-400 to-slate-600 border-slate-400">
-              <CardHeader>
-                <div className="text-5xl mb-4">🥈</div>
-                <CardTitle className="text-2xl text-white">{t('categorySilver')}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-white">
-                <div>
-                  <p className="text-sm opacity-90">{t('minInvestment')}</p>
-                  <p className="text-3xl font-bold">$1.000</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>{t('insuranceCoverage')}</span>
-                    <span className="font-bold">50%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('monthlyReward')}</span>
-                    <span className="font-bold">$15 USDT</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('maxReward')}</span>
-                    <span className="font-bold">$500 USDT</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Bronze */}
-            <Card className="bg-gradient-to-br from-amber-700 to-amber-900 border-amber-600">
-              <CardHeader>
-                <div className="text-5xl mb-4">🥉</div>
-                <CardTitle className="text-2xl text-white">{t('categoryBronze')}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-white">
-                <div>
-                  <p className="text-sm opacity-90">{t('minInvestment')}</p>
-                  <p className="text-3xl font-bold">$500</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>{t('insuranceCoverage')}</span>
-                    <span className="font-bold">25%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('monthlyReward')}</span>
-                    <span className="font-bold">$10 USDT</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{t('maxReward')}</span>
-                    <span className="font-bold">$125 USDT</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Benefícios */}
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center mb-8 text-yellow-400">{t('benefitsTitle')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-4">
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <CardTitle className="text-lg text-yellow-400">{t('rewardValidity')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300">{t('rewardValidityDesc')}</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <CardTitle className="text-lg text-yellow-400">{t('directPayments')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300">{t('directPaymentsDesc')}</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <CardTitle className="text-lg text-yellow-400">{t('insuranceActivation')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300">{t('insuranceActivationDesc')}</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <CardTitle className="text-lg text-yellow-400">{t('exclusiveClub')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300">{t('exclusiveClubDesc')}</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-lg px-8 py-6"
-                onClick={() => window.open('https://criptonopix.app.br', '_blank')}
-              >
-                {t('investNow')} <ExternalLink className="ml-2" size={20} />
-              </Button>
-              
-              {/* Disclaimer */}
-              <div className="mt-6 p-4 bg-slate-800/50 border border-yellow-500/30 rounded-lg max-w-2xl mx-auto">
-                <p className="text-slate-300 text-sm">
-                  <span className="text-yellow-400 font-semibold">{t('disclaimer')}</span> {t('disclaimerText')}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
