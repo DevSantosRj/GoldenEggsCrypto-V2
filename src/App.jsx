@@ -275,7 +275,7 @@ function App() {
               <CardContent>
                 <div className="text-4xl font-bold text-green-400 mb-2">15%</div>
                 <p className="text-slate-400 text-sm">
-                  Do lucro líquido distribuído aos holders
+                  {t('profitShareDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -289,7 +289,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300 text-sm">
-                  Relatórios financeiros transparentes e auditados regularmente
+                  {t('transparencyDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -303,7 +303,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300 text-sm">
-                  Alinhamento de interesses entre negócio e comunidade cripto
+                  {t('communityDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -317,7 +317,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-300 text-sm">
-                  Crescimento sustentável com valorização de longo prazo
+                  {t('sustainableModelDesc')}
                 </p>
               </CardContent>
             </Card>
