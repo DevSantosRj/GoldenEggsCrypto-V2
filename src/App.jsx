@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { Coins, TrendingUp, Shield, Users, Rocket, Target, CheckCircle2, Twitter, Send, Instagram, Menu, X, ChevronDown, ExternalLink, Copy, Check, DollarSign, PieChart, Award } from 'lucide-react'
 import LanguageSelector from './components/LanguageSelector'
 import SwapWidget from './components/SwapWidget'
+import PriceDisplay from './components/PriceDisplay'
 import tulioImg from './assets/tulio-rodrigues.webp'
 import marcosImg from './assets/marcos-santos.webp'
 import luizImg from './assets/luiz-oliveira.webp'
@@ -122,8 +123,8 @@ function App() {
             </Card>
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">$0.0024</div>
-                <div className="text-slate-400">{t('initialPrice')}</div>
+                <PriceDisplay showChange={true} />
+                <div className="text-slate-400 mt-2">{t('currentPrice')}</div>
               </CardContent>
             </Card>
             <Card className="bg-slate-900/50 border-slate-800 backdrop-blur">
