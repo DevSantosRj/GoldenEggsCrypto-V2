@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-const TOKEN_ADDRESS = '0xaeded60cbadd688279908df18194fd31387baeb4'
+// TOKEN DE TESTE (MIKA) - Para verificar funcionamento do rastreamento em tempo real
+// Quando o Golden Eggs for lançado, trocar para: 0xaeded60cbadd688279908df18194fd31387baeb4
+const TOKEN_ADDRESS = '0x2b3439fc69cae6fdce8276ac52fd0f38ee146072'
 const API_URL = `https://api.dexscreener.com/latest/dex/tokens/bsc/${TOKEN_ADDRESS}`
 const UPDATE_INTERVAL = 30000 // 30 segundos
 
