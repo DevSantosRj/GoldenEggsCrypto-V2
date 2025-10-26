@@ -38,16 +38,15 @@ const PriceDisplay = ({ showChange = false, className = '' }) => {
     return change > 0 ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />
   }
 
-  if (error) {
+  if (error && !price) {
     console.error('Price display error:', error)
-    // Em caso de erro, mostrar valor padrão
+    // Em caso de erro e sem preço, mostrar valor padrão
     return (
       <div className={className}>
         <div className="text-4xl font-bold text-yellow-400">$0.0024</div>
         {showChange && (
-          <div className="text-xs text-slate-500 mt-1 flex items-center gap-1">
-            <RefreshCw className="w-3 h-3 animate-spin" />
-            Atualizando...
+          <div className="text-xs text-slate-500 mt-1">
+            Preço padrão
           </div>
         )}
       </div>
@@ -58,13 +57,9 @@ const PriceDisplay = ({ showChange = false, className = '' }) => {
     <div className={className}>
       <div className="flex items-center gap-2">
         <div className="text-4xl font-bold text-yellow-400">
-          {loading && !price ? (
-            <span className="animate-pulse">$0.0024</span>
-          ) : (
-            formatPrice(price)
-          )}
+          {formatPrice(price)}
         </div>
-        {loading && (
+        {loading && price && (
           <RefreshCw className="w-4 h-4 text-yellow-400 animate-spin" />
         )}
       </div>
