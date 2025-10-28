@@ -2,11 +2,13 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx'
-import { ExternalLink, Wallet, ArrowRight } from 'lucide-react'
+import { ExternalLink, Wallet, ArrowRight, RefreshCw } from 'lucide-react'
+import useTokenPrice from '../hooks/useTokenPrice'
 
 const SwapWidget = () => {
   const { t } = useTranslation()
   const [isSwapping, setIsSwapping] = useState(false)
+  const { price, loading } = useTokenPrice()
   
   const TOKEN_ADDRESS = '0xaeded60cbadd688279908df18194fd31387baeb4'
   
@@ -47,7 +49,10 @@ const SwapWidget = () => {
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-slate-400">{t('currentPrice')}:</span>
-            <span className="text-yellow-400 font-bold">$0.0024</span>
+            <span className="text-yellow-400 font-bold flex items-center gap-1">
+              {price ? `$${price.toFixed(price < 0.01 ? 6 : price < 1 ? 4 : 2)}` : '$0.0024'}
+              {loading && price && <RefreshCw className="w-3 h-3 animate-spin" />}
+            </span>
           </div>
         </div>
 
