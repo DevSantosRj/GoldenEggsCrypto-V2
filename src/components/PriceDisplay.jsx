@@ -43,9 +43,9 @@ const PriceDisplay = ({ showChange = false, className = '' }) => {
     // Em caso de erro e sem preço, mostrar valor padrão
     return (
       <div className={className}>
-        <div className="text-4xl font-bold text-yellow-400">$0.0024</div>
+        <div className="text-4xl font-bold text-yellow-400 text-center">$0.0024</div>
         {showChange && (
-          <div className="text-xs text-slate-500 mt-1">
+          <div className="text-xs text-slate-500 mt-1 text-center">
             Preço padrão
           </div>
         )}
@@ -55,7 +55,7 @@ const PriceDisplay = ({ showChange = false, className = '' }) => {
 
   return (
     <div className={className}>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         <div className="text-4xl font-bold text-yellow-400">
           {formatPrice(price)}
         </div>
@@ -65,14 +65,14 @@ const PriceDisplay = ({ showChange = false, className = '' }) => {
       </div>
       
       {showChange && change24h !== 0 && (
-        <div className={`text-sm mt-1 flex items-center gap-1 ${getChangeColor(change24h)}`}>
+        <div className={`text-sm mt-1 flex items-center justify-center gap-1 ${getChangeColor(change24h)}`}>
           {getChangeIcon(change24h)}
           <span>{formatChange(change24h)}% (24h)</span>
         </div>
       )}
       
       {lastUpdate && (
-        <div className="text-xs text-slate-500 mt-1">
+        <div className="text-xs text-slate-500 mt-1 text-center">
           Atualizado: {lastUpdate.toLocaleTimeString('pt-BR', { 
             hour: '2-digit', 
             minute: '2-digit' 
