@@ -10,7 +10,7 @@ const SwapWidget = () => {
   const [isSwapping, setIsSwapping] = useState(false)
   const { price, loading } = useTokenPrice()
   
-  const TOKEN_ADDRESS = '0xaeded60cbadd688279908df18194fd31387baeb4'
+  const TOKEN_ADDRESS = '0xafc7bf77D07779052046bf18c37D68b2a075909b'
   
   // URL do PancakeSwap com o token GEG
   const PANCAKESWAP_URL = `https://pancakeswap.finance/swap?outputCurrency=${TOKEN_ADDRESS}&chainId=56`

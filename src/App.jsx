@@ -30,7 +30,7 @@ function App() {
   }
 
   const copyContract = () => {
-    const contractAddress = '0xaeded60cbadd688279908df18194fd31387baeb4'
+    const contractAddress = '0xafc7bf77D07779052046bf18c37D68b2a075909b'
     navigator.clipboard.writeText(contractAddress)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -171,7 +171,7 @@ function App() {
                 <div className="flex-1 text-center sm:text-left">
                   <p className="text-slate-400 text-sm mb-1">{t('contractAddress')}</p>
                   <p className="text-yellow-400 font-mono text-xs sm:text-sm break-all">
-                    0xaeded60cbadd688279908df18194fd31387baeb4
+                    0xafc7bf77D07779052046bf18c37D68b2a075909b
                   </p>
                 </div>
                 <Button
