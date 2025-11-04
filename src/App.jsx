@@ -153,9 +153,16 @@ function App() {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mt-12 px-4">
-            <Badge variant="outline" className="border-green-500 text-green-400 px-4 py-2 text-sm">
-              <CheckCircle2 className="mr-2" size={16} /> {t('audited')}
-            </Badge>
+            <a 
+              href="https://docs.criptonopix.app.br/cripto-no-pix-audits/geg" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Badge variant="outline" className="border-green-500 text-green-400 px-4 py-2 text-sm cursor-pointer hover:bg-green-500/10 transition-colors">
+                <CheckCircle2 className="mr-2" size={16} /> {t('audited')}
+              </Badge>
+            </a>
             <Badge variant="outline" className="border-blue-500 text-blue-400 px-4 py-2 text-sm">
               <Shield className="mr-2" size={16} /> {t('realBacking')}
             </Badge>
