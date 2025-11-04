@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-// TOKEN DE TESTE (DOGE) - Para verificar funcionamento do rastreamento em tempo real
-// Token estável com alta liquidez para testes confiáveis
-// Quando o Golden Eggs for lançado, trocar para: 0xaeded60cbadd688279908df18194fd31387baeb4
-const TOKEN_ADDRESS = '0xba2ae424d960c26247dd6c32edc70b295c744c43'
+// TOKEN OFICIAL GOLDEN EGGS ($GEG)
+// Endereço do contrato oficial na BSC
+// Preço de lançamento: $0.0024
+const TOKEN_ADDRESS = '0xafc7bf77D07779052046bf18c37D68b2a075909b'
 const API_URL = `https://api.dexscreener.com/latest/dex/tokens/${TOKEN_ADDRESS}`
 const UPDATE_INTERVAL = 30000 // 30 segundos
 
